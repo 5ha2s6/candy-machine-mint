@@ -1,3 +1,97 @@
 .App {
   text-align: center;
 }
+
+@font-face {
+  font-family: Pogo;
+  src: url("font/Pogo.otf");
+}
+
+h1,
+h2,
+h3 {
+  font-family: Pogo !important;
+  font-weight: normal;
+  color: #444;
+}
+
+h1,
+h2 {
+  background: linear-gradient(to bottom right, #6632ac, #0cc695);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+hr {
+  border: 1px solid #eee;
+}
+
+.MuiPaper-root h2 {
+  color: white;
+  background: none;
+  -webkit-text-fill-color: white;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.menu__icon {
+  display: block !important;
+  cursor: pointer;
+}
+
+.menu {
+  width: 100%;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 2em 0;
+}
+
+.menu.show {
+  display: flex;
+}
+
+.menu p {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.menu p a {
+  margin: 0;
+}
+
+@media all and (min-width: 800px) {
+  .menu__icon {
+    display: none !important;
+  }
+
+  .menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .menu p {
+    flex-direction: row;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  .menu p a:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  .menu button {
+    margin-left: auto;
+  }
+}
